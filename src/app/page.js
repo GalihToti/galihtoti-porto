@@ -1,0 +1,16 @@
+import Image from "next/image";
+import ProfileCard from "@/components/profileCard/ProfileCard";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen overflow-x-hidden">
+      <div className="container border mx-auto h-screen">
+        <div className="grid grid-cols-12">
+          <div className="col-span-6"></div>
+          <div className="col-span-6"></div>
+          <ProfileCard />
+        </div>
+      </div>
+    </div>
+  );
+}
