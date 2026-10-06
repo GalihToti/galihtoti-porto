@@ -4,27 +4,15 @@ import RotatingText from "@/components/rotatingText/RotatingText";
 import AnimatedContent from "@/components/animatedContent/AnimatedContent";
 import SideRays from "@/components/sideRays/SideRays";
 import SoftAurora from "@/components/softAurora/SoftAurora";
+import GradientText from "@/components/gradientText/GradientText";
+import Link from "next/link";
+import SiteNavbar from "@/components/resizableNavbar/SiteNavbar";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[#0e0e0e]">
-      <div className="absolute inset-0 z-0">
-        <SoftAurora
-          speed={0.6}
-          scale={1.5}
-          brightness={0.5}
-          color1="#f7f7f7"
-          color2="#C6F10E"
-          noiseFrequency={2.5}
-          noiseAmplitude={1}
-          bandHeight={0.5}
-          bandSpread={1}
-          octaveDecay={0.1}
-          layerOffset={0}
-          colorSpeed={1}
-          enableMouseInteraction
-          mouseInfluence={0.25}
-        />
+      <div className="fixed top-0 w-full z-30 mb-4">
+        <SiteNavbar />
       </div>
       <div className="absolute inset-0 z-20 pointer-events-none mix-blend-screen
              [mask:linear-gradient(to_left,black_30%,transparent_75%)]">
@@ -42,7 +30,7 @@ export default function Home() {
           opacity={1}
         />
       </div>
-      <div className="relative z-10 container mx-auto h-screen">
+      <div className="relative z-10 container mx-auto min-h-screen px-6 pt-32 md:px-12 lg:px-16">
         <div className="grid grid-cols-12">
           <div className="col-span-6">
             <div className="flex items-center h-full">
@@ -83,7 +71,7 @@ export default function Home() {
                   <h1 className="text-lg font-bold text-white">I'm Ready For Jobs</h1>
                   <RotatingText
                     texts={['Web Development', 'IT Support', 'Cyber Security', 'Saya Satpol']}
-                    mainClassName="px-2 sm:px-2 md:px-3 bg-[#C6F10E] text-black overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-lg font-bold inline-flex transition-all"
+                    mainClassName="px-2 sm:px-2 md:px-3 text-[#C6F10E] overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-lg font-bold inline-flex transition-all"
                     staggerFrom="first"
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -110,15 +98,23 @@ export default function Home() {
                   threshold={0.1}
                   delay={0}
                 >
-                  <p>lorem ipsum dolor sit amet, dengan menyebut nama Allah yang maha pengasih lagi maha penyayang.</p>
-                </AnimatedContent>
+                  <div className="flex flex-col gap-8 items-start">
+                    <p>Lorem ipsum dolor sit amet, dengan menyebut nama Allah yang maha pengasih lagi maha penyayang. Lorem Lorem ipsum dolor sit amet, dengan menyebut nama Allah yang maha pengasih lagi maha penyayang</p>
+                    <Link
+                      href="#"
+                      className="inline-flex items-center justify-center rounded-lg border border-[#C6F10E] bg-[#C6F10E] px-2 md:px-3 py-0.5 sm:py-1 font-semibold text-black transition-all duration-100 hover:bg-transparent hover:text-[#C6F10E]"
+                    >
+                      Contact Me
+                    </Link>
+                  </div>
 
+                </AnimatedContent>
               </div>
             </div>
           </div>
           <div className="col-span-6 h-full">
             <AnimatedContent
-              className="flex items-center gap-2"
+              className="flex items-center justify-end h-full"
               distance={150}
               direction="horizontal"
               reverse={false}
@@ -130,11 +126,50 @@ export default function Home() {
               threshold={0.1}
               delay={0}
             >
-              <ProfileCard />
+              <div className="ml-auto origin-right scale-80">
+                <ProfileCard />
+              </div>
             </AnimatedContent>
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
